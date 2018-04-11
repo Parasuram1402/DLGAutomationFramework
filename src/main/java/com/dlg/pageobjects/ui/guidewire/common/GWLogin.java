@@ -34,10 +34,11 @@ WebElement logOutOk;
 	    this.driver=super.driver;
 	}
 
-	public void logIn(String uid, String pwd){
+	public void logIn(String uid, String pwd) throws InterruptedException{
 		userName.sendKeys(uid);
 		password.sendKeys(pwd);
 		logIn.click();
+		Thread.sleep(5000);
 	}
 	
 	public void logOut() throws InterruptedException{

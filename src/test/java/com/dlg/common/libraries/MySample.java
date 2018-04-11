@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import com.dlg.pageobjects.ui.guidewire.common.GWLogin;
 import com.dlg.pageobjects.ui.guidewire.policycenter.AccountCreation;
 
@@ -15,8 +17,11 @@ public class MySample {
     public static void main(String[] args) throws InterruptedException {
     	WebDriver driver = null;
     	try{
-        	System.setProperty("webdriver.chrome.driver", "./Resources/BrowserDrivers/chromedriver.exe");
-        	driver = new ChromeDriver();
+        	//System.setProperty("webdriver.chrome.driver", "./Resources/BrowserDrivers/win/chromedriver");
+        	System.setProperty("webdriver.gecko.driver",  "./Resources/BrowserDrivers/win/geckodriver");
+    		
+    		driver = new FirefoxDriver();         	
+ /*       	driver = new ChromeDriver();*/
     		driver.manage().window().maximize();
     		
     		driver.get("http://in-hyd-insudem2:5050/pc");

@@ -122,14 +122,17 @@ public class AccountCreation extends BasePageClass {
 		try{
 			SearchAccount(map);
 			Create_new_account.click();	
+			Thread.sleep(500);
 			click_person.click();
-			Thread.sleep(2000);
+			Thread.sleep(10000);
 			if(map.get("Address_1")!=null) address_1.sendKeys(map.get("Address_1"));
+			Thread.sleep(500);
 			if(map.get("Address_Type")!=null){
 				address_type.click();
 				address_type.sendKeys(map.get("Address_Type"));
 				address_type.sendKeys(Keys.ENTER);
 			}
+			Thread.sleep(500);
 			if(map.get("Organization")!=null){
 				organization.sendKeys(map.get("Organization"));
 				Thread.sleep(3000);
@@ -157,8 +160,11 @@ public class AccountCreation extends BasePageClass {
 
 			  Thread.sleep(2000);
 			  if(map.get("Company")!=null) company_name.sendKeys(map.get("Company"));
+			  Thread.sleep(500);
 			  if(map.get("FirstName")!=null) first_name.sendKeys(map.get("FirstName"));
+			  Thread.sleep(500);
 			  if(map.get("LastName")!=null) last_name.sendKeys(map.get("LastName"));
+			  Thread.sleep(500);
 			  if(map.get("Country")!=null){
 				  country.click();
 				  country.sendKeys(map.get("Country"));
@@ -166,7 +172,9 @@ public class AccountCreation extends BasePageClass {
 			  }
 			  Thread.sleep(2000);
 			  if(map.get("City")!=null)	  city.sendKeys(map.get("City"));
+			  Thread.sleep(1000);
 			  if(map.get("Postcode")!=null) postcode.sendKeys(map.get("Postcode"));
+			  Thread.sleep(1000);
 			  search.click();
 			  Thread.sleep(5000);
 			

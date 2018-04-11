@@ -52,7 +52,7 @@ public class InitializationClass {
     		System.setProperty("webdriver.chrome.driver", driverPath+"chromedriver");
     		driver = new ChromeDriver();
     	} else if(browserType.equalsIgnoreCase("firefox")){
-    		System.setProperty("webdriver.firefox.marionette",  driverPath+"geckodriver");
+    		System.setProperty("webdriver.gecko.driver",  driverPath+"geckodriver");
     		driver = new FirefoxDriver();   		
     	}
     }
