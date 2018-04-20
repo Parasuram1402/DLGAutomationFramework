@@ -1,25 +1,19 @@
 package com.dlg.stepdefinitions.acceptancetests;
 
 import java.io.File;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+
 import java.util.Map;
 
-import org.junit.AfterClass;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.dlg.common.libraries.EnvironmentVariablesHandler;
 import com.dlg.common.libraries.ReportingUtilities;
-
 import cucumber.api.java.After;
-import cucumber.api.java.Before;
-import cucumber.runtime.Runtime;
 import cucumber.runtime.RuntimeOptions;
-import cucumber.runtime.io.ResourceLoader;
-import cucumber.runtime.model.*;
+
 
 public class InitializationClass {
     private static boolean executionFlag = false;

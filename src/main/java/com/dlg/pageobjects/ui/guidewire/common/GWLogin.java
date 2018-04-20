@@ -1,6 +1,7 @@
 package com.dlg.pageobjects.ui.guidewire.common;
 
 import org.openqa.selenium.By;
+import com.dlg.pageobjects.ui.BaseObjectClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,22 +12,22 @@ WebDriver driver;
 
 
 @FindBy(xpath="//input[@id='Login:LoginScreen:LoginDV:username-inputEl']")
-public WebElement userName;
+public BaseObjectClass userName;
 
 @FindBy(xpath="//input[@id='Login:LoginScreen:LoginDV:password-inputEl']")
-public WebElement password;
+public BaseObjectClass password;
 
 @FindBy(linkText ="Log In")
-public WebElement logIn;
+public BaseObjectClass logIn;
 
 @FindBy(xpath="//*[@id=':TabLinkMenuButton-btnIconEl']")
-WebElement menuButton;
+BaseObjectClass menuButton;
 
 @FindBy(xpath="//*[@id='TabBar:LogoutTabBarLink-itemEl']")
-WebElement logOut;
+BaseObjectClass logOut;
 
 @FindBy(xpath="//*[@id='button-1005-btnInnerEl']")
-WebElement logOutOk;
+BaseObjectClass logOutOk;
 
 	public GWLogin(WebDriver driver){
 	    //this.driver = driver;

@@ -76,15 +76,15 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 6460657972,
+  "duration": 4736024603,
   "status": "passed"
 });
 formatter.before({
-  "duration": 59238268,
+  "duration": 57559544,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11888886,
+  "duration": 6824395,
   "status": "passed"
 });
 formatter.scenario({
@@ -136,7 +136,7 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded0.png");
 formatter.result({
-  "duration": 25942155759,
+  "duration": 17196642552,
   "status": "passed"
 });
 formatter.match({
@@ -144,7 +144,7 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded1.png");
 formatter.result({
-  "duration": 13040443431,
+  "duration": 21900553911,
   "status": "passed"
 });
 formatter.match({
@@ -158,7 +158,7 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded2.png");
 formatter.result({
-  "duration": 1407384689100,
+  "duration": 62708856912,
   "status": "passed"
 });
 formatter.match({
@@ -172,11 +172,11 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded3.png");
 formatter.result({
-  "duration": 13682540288,
+  "duration": 13491046050,
   "status": "passed"
 });
 formatter.after({
-  "duration": 632715485,
+  "duration": 711203199,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -237,15 +237,15 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 5386594372,
+  "duration": 3793194485,
   "status": "passed"
 });
 formatter.before({
-  "duration": 983598,
+  "duration": 1615668,
   "status": "passed"
 });
 formatter.before({
-  "duration": 157829,
+  "duration": 172554,
   "status": "passed"
 });
 formatter.scenario({
@@ -294,7 +294,7 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded4.png");
 formatter.result({
-  "duration": 22689777001,
+  "duration": 17164231019,
   "status": "passed"
 });
 formatter.match({
@@ -302,7 +302,7 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded5.png");
 formatter.result({
-  "duration": 12859910740,
+  "duration": 20538372400,
   "status": "passed"
 });
 formatter.match({
@@ -316,7 +316,7 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded6.png");
 formatter.result({
-  "duration": 25315771171,
+  "duration": 6125612436,
   "status": "passed"
 });
 formatter.match({
@@ -324,6 +324,11 @@ formatter.match({
 });
 formatter.embedding("image/png", "embedded7.png");
 formatter.result({
-  "duration": 8123540273,
+  "duration": 8383646977,
   "status": "passed"
+});
+formatter.after({
+  "duration": 693148797,
+  "status": "passed"
+});
 });

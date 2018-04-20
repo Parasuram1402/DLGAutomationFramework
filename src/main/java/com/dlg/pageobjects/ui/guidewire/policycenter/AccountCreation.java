@@ -3,6 +3,7 @@ package com.dlg.pageobjects.ui.guidewire.policycenter;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -120,12 +121,13 @@ public class AccountCreation extends BasePageClass {
 	}
 	public void CreateAccount(Map<String, String> map) throws InterruptedException{
 		try{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
 			SearchAccount(map);
-			Create_new_account.click();	
+			if(JavaScriptDynamicWait(js,"10000"))	Create_new_account.click();	
 			Thread.sleep(500);
 			click_person.click();
-			Thread.sleep(10000);
-			if(map.get("Address_1")!=null) address_1.sendKeys(map.get("Address_1"));
+			//Thread.sleep(10000);
+			if(map.get("Address_1")!=null && JavaScriptDynamicWait(js,"10000")) address_1.sendKeys(map.get("Address_1"));
 			Thread.sleep(500);
 			if(map.get("Address_Type")!=null){
 				address_type.click();
@@ -135,20 +137,19 @@ public class AccountCreation extends BasePageClass {
 			Thread.sleep(500);
 			if(map.get("Organization")!=null){
 				organization.sendKeys(map.get("Organization"));
-				Thread.sleep(3000);
-				seacrhIcon.click();
-				Thread.sleep(10000);
-				returnLink.click();
-				Thread.sleep(2000);
+				if(JavaScriptDynamicWait(js,"3000"))
+					seacrhIcon.click();
+				if(JavaScriptDynamicWait(js,"10000"))
+					returnLink.click();
 			}
 			//Thread.sleep(4000);
-			if(map.get("Producer_Code")!=null){
+			if(map.get("Producer_Code")!=null && JavaScriptDynamicWait(js,"10000")){
 				producerCode.click();
 				producerCode.sendKeys(map.get("Producer_Code"));
 				producerCode.sendKeys(Keys.ENTER);
 			}
 			update.click();
-			Thread.sleep(5000);
+			
 			
 		} catch(Exception e){
 			e.printStackTrace();
@@ -157,26 +158,32 @@ public class AccountCreation extends BasePageClass {
 	
 	public void SearchAccount(Map<String, String> map) {
 		try{
-
-			  Thread.sleep(2000);
-			  if(map.get("Company")!=null) company_name.sendKeys(map.get("Company"));
-			  Thread.sleep(500);
-			  if(map.get("FirstName")!=null) first_name.sendKeys(map.get("FirstName"));
-			  Thread.sleep(500);
-			  if(map.get("LastName")!=null) last_name.sendKeys(map.get("LastName"));
-			  Thread.sleep(500);
-			  if(map.get("Country")!=null){
-				  country.click();
-				  country.sendKeys(map.get("Country"));
-				  country.sendKeys(Keys.ENTER);
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+			  //Thread.sleep(2000);
+			  if(JavaScriptDynamicWait(js,"5000")){
+				  if(map.get("Company")!=null) company_name.sendKeys(map.get("Company"));
+				  Thread.sleep(500);
+				  if(map.get("FirstName")!=null) first_name.sendKeys(map.get("FirstName"));
+				  Thread.sleep(500);
+				  if(map.get("LastName")!=null) last_name.sendKeys(map.get("LastName"));
+				  Thread.sleep(500);
+				  if(map.get("Country")!=null){
+					  country.click();
+					  country.sendKeys(map.get("Country"));
+					  country.sendKeys(Keys.ENTER);
+				  }
+				  
+				 
+				  
+				  if(map.get("City")!=null && JavaScriptDynamicWait(js,"5000"))	  city.sendKeys(map.get("City"));
+				  
+				  if(map.get("Postcode")!=null && JavaScriptDynamicWait(js,"5000")) postcode.sendKeys(map.get("Postcode"));
+				  
+				  if(JavaScriptDynamicWait(js,"5000")){
+					  search.click();
+				  }
 			  }
-			  Thread.sleep(2000);
-			  if(map.get("City")!=null)	  city.sendKeys(map.get("City"));
-			  Thread.sleep(1000);
-			  if(map.get("Postcode")!=null) postcode.sendKeys(map.get("Postcode"));
-			  Thread.sleep(1000);
-			  search.click();
-			  Thread.sleep(5000);
+			  
 			
 		} catch(Exception e) {
 			
