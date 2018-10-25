@@ -198,13 +198,6 @@
 		    <version>1.7.7</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
-		<dependency>
-		    <groupId>org.apache.pdfbox</groupId>
-		    <artifactId>pdfbox</artifactId>
-		    <version>2.0.9</version>
-		</dependency>
-
 
 	<!-- Dependencies for API testing -->
 		<!-- https://mvnrepository.com/artifact/javax.activation/activation -->
